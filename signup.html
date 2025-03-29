@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    
+</head>
+
+<body style="font-family: Arial, sans-serif; background-image: url(pics/mds.png); display: flex; justify-content: csenter; align-items: center; height: 300%; margin: 5px; justify-content: center;">
+
+    <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 500px;">
+        <div style="width: 500px; text-align: center;">
+                <header style="background-color: lightblue; padding: 10px; border-radius: 5px; justify-content: center;">
+                <nav>
+                    <a href="Home.html" style="padding: 5px; border-radius: 5x; text-decoration: none;">HOME</a>
+                    <a href="sign.html" style="padding: 20px; border-radius: 20px; text-decoration: none;">LOGIN</a>
+                    <a href="signup.html" style="padding: 20px; border-radius: 20px; text-decoration: none;">REGISTER</a>
+                    <a href="ABOUT.HTML" style="padding: 20px; border-radius: 20px; text-decoration: none;">ABOUT US</a>
+                </nav>
+            </header>
+        </div>
+    <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 300px;">
+        <h2 style="text-align: center; color: #333;">Sign Up</h2>
+        <form action="sign.html" method="post">
+            <div style="margin-bottom: 15px;">
+                <div style="margin-bottom: 15px;">
+                    <label for="FullName" style="display: block; margin-bottom: 5px; color: #555;">FullName:</label>
+                    <input type="fullname" id="fullname" name="fullname" style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px;" required>
+                </div>
+                
+                <label for="username" style="display: block; margin-bottom: 5px; color: #555;">Username:</label>
+                <input type="text" id="username" name="username" style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px;" required>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="email" style="display: block; margin-bottom: 5px; color: #555;">Email:</label>
+                <input type="email" id="email" name="email" style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px;" required>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="phone number" style="display: block; margin-bottom: 5px; color: #555;">phone number:</label>
+                <input type="phone number" id="phone number" name="phone number" style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px;" required>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="Address" style="display: block; margin-bottom: 5px; color: #555;">Address:</label>
+                <input type="Address" id="address" name="address" style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px;" required>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label for="password" style="display: block; margin-bottom: 5px; color: #555;">Password:</label>
+                <input type="password" id="password" name="password" style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px;" required>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="confirm-password" style="display: block; margin-bottom: 5px; color: #555;">Confirm Password:</label>
+                <input type="password" id="c_password" name="confirm-password" onkeyup="signup_check()" style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px;" required>
+            </div>
+            <div style="text-align: center;">
+                <button onclick="Validate()"  style="border-radius: 10px; background-color: white; background-size: 100px; " id="signup">Sign up</button>
+            </div>
+        </form>
+        <p>Already a member? <a style="text-decoration: none;" href="sign.html">sign in</a></p>
+    </div>
+    
+
+
+
+
+
+
+
+    <script>
+         
+        function Validate(){
+            var password = document.getElementById('password').value;
+            var confirm_password = document.getElementById('c_password').value;
+            if(password == confirm_password){
+                  var signup = document.getElementById('signup'); 
+    
+            if (password!==confirm_password){
+                signup.setAttribute("disabled")
+            }
+                alert('registration succesful login now');
+            }
+           else{
+            alert("check your inputs");
+           }
+        }
+        
+        
+        function signup_check(){
+            var password = document.getElementById('password').value;    
+            var confirm_password = document.getElementById('c_password').value;
+            var signup = document.getElementById('signup'); 
+
+        
+    
+            if (password!==confirm_password){
+                signup.setAttribute("disabled", "")
+            }else{
+                signup.removeAttribute("disabled")
+            }
+        }
+    
+    
+    
+    
+    
+    </script>
+</body>
+
+</html>

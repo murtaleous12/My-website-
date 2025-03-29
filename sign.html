@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-image: url(pics/mds.png); display: flex; justify-content: csenter; align-items: center; height: 300%; margin: 5px; justify-content: center;">
+
+    <div style="background-image: url(pics/md\ service.png); padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 500px;">
+        <div style="width: 500px; text-align: center;">
+                <header style="background-color: lightblue; padding: 10px; border-radius: 5px; justify-content: center;">
+                <nav>
+                    <a href="Home.html" style="padding: 5px; border-radius: 5x; text-decoration: none;">HOME</a>
+                    <a href="sign.html" style="padding: 20px; border-radius: 20px; text-decoration: none;">LOGIN</a>
+                    <a href="signup.html" style="padding: 20px; border-radius: 20px; text-decoration: none;">REGISTER</a>
+                    <a href="ABOUT.HTML" style="padding: 20px; border-radius: 20px; text-decoration: none;">ABOUT US</a>
+                </nav>
+            </header>
+        </div>
+        <h2 style="text-align: center; color: #333;">LOGIN</h2>
+        <form action="INSIDE.HTML"  method="post">
+            <div style="margin-bottom: 15px;">
+                <label for="username" style="display: block; margin-bottom: 5px; color: #555;">Username:</label>
+                <input type="text" id="username" name="username"  style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px;" required>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="password" style="display: block; margin-bottom: 5px; color: #555;">Password:</label>
+                <input type="password" id="password" name="password" style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px;" required>
+            </div>
+            <a style="text-decoration: none;" href="">Forgot Your Password</a>
+            <div style="text-align: center;">
+            <button style="border-radius: 10px; background-color: white, " id="Login">Login</button>
+            </div>
+        </form>
+        <p>Dont't have an account yet? <a style="text-decoration: none;" href="signup.html">sign up</a></p>
+    </div>
+
+    <script>
+        function Validate(){
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if(username == password){
+                  var login = document.getElementById('login').value
+    
+           
+                alert('your successful login');
+            }
+           else{
+            alert("check your inputs");
+           }
+        }
+    </script>
+</body>
+</html>
